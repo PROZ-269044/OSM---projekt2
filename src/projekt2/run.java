@@ -16,7 +16,7 @@ public class run {
 		
 		try
 		{
-			BufferedImage image=ImageIO.read(new File("content_LENA_G_100.jpg"));
+			BufferedImage image=ImageIO.read(new File("Lena.jpg"));
 			   
 		     
 		     SwingUtilities.invokeLater(new Runnable()
@@ -26,7 +26,7 @@ public class run {
 					ImageDemo app1 = new ImageDemo(image, "Obraz przed algorytmem");
 					app1.setVisible(true);
 					
-					Converter.setSigma((float) 1.1);
+					Converter.setSigma((float) 1.4);
 					Converter.setK(2);
 					
 					final BufferedImage image2=Converter.filter(image, image);
