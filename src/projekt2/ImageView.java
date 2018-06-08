@@ -16,7 +16,7 @@ public class ImageView extends JPanel
 	
 	public ImageView()
 	{
-		this.setPreferredSize(new Dimension(500,500));
+		this.setPreferredSize(new Dimension(800,800));
 	}
 		
 	// ustawienie obrazu zgodnie z jego wymiarami i wymuszenie odrysowania

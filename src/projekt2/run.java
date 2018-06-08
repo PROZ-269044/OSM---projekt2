@@ -16,7 +16,7 @@ public class run {
 		
 		try
 		{
-			BufferedImage image=ImageIO.read(new File("Lena.jpg"));
+			BufferedImage image=ImageIO.read(new File("0006.dcm"));
 			   
 		     
 		     SwingUtilities.invokeLater(new Runnable()
@@ -26,8 +26,8 @@ public class run {
 					ImageDemo app1 = new ImageDemo(image, "Obraz przed algorytmem");
 					app1.setVisible(true);
 					
-					Converter.setSigma((float) 1.4);
-					Converter.setK(2);
+					Converter.setSigma((float) 2);
+					Converter.setK(5);
 					
 					final BufferedImage image2=Converter.filter(image, image);
 					ImageDemo app2 = new ImageDemo(image2, "Obraz po algorytmie");

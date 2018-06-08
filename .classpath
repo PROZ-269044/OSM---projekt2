@@ -2,5 +2,20 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/dcm4che-audit-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-base64-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-core-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-filecache-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-hp-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-image-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-imageio-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-imageio-rle-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-iod-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-net-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/dcm4che-soundex-2.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/jai_imageio.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
