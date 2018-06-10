@@ -18,8 +18,8 @@ public class ImageProcessing implements BufferedImageOp
 	int filterKernelSize = 3;
 	float[] sobelXData3 = {1, 0, -1, 2, 0, -2, 1, 0, -1};
 	float[] sobelYData3 = {1, 2, 1, 0, 0, 0, -1, -2, -1};
-	float[] sobelYData5 = {1, 2, 4, 2, 1, 2, 4, 8, 4, 2, 0, 0, 0, 0, 0, -2, -4, -8, -4, -2, -1, -2, -4, -2, -1};
-	float[] sobelXData5 = {1, 2, 0, -2, -1, 2, 4, 0, -4, -2, 4, 8, 0, -8, -4, 2, 4, 0, -4, -2, 1, 2, 0, -2, -1};
+	//float[] sobelYData5 = {1, 2, 4, 2, 1, 2, 4, 8, 4, 2, 0, 0, 0, 0, 0, -2, -4, -8, -4, -2, -1, -2, -4, -2, -1};
+	//float[] sobelXData5 = {1, 2, 0, -2, -1, 2, 4, 0, -4, -2, 4, 8, 0, -8, -4, 2, 4, 0, -4, -2, 1, 2, 0, -2, -1};
 
 	
 	private Kernel sobelX3 = new Kernel(filterKernelSize, filterKernelSize, sobelXData3);
@@ -50,8 +50,8 @@ public class ImageProcessing implements BufferedImageOp
 	int[] tmpPixel = {0};
 	
 	//dla ustalenia poziomów wykrywania pikseli
-	double thresholdLow = 15;
-	double thresholdHigh = 75;
+	double thresholdLow;
+	double thresholdHigh;
 	
 	
 	//gettery i settery dla progów
@@ -214,7 +214,7 @@ public class ImageProcessing implements BufferedImageOp
 		 return filter;
 	}
 	
-	private Kernel gaussianFilter(final float sigma, final int k)// do wrzucenia danych o masce filtru
+	/*private Kernel gaussianFilter(final float sigma, final int k)// do wrzucenia danych o masce filtru
 	{
 		 final int n = 2*k+1;
 		 float kernel[][] = new float[n][n];
@@ -278,10 +278,10 @@ public class ImageProcessing implements BufferedImageOp
 		 
 		 filter = new Kernel(n, n, kernelData);
 		 return filter;
-	}
+	}*/
 	
 	//do wyznaczenia rezultatów z filtracji Sobela - dla wspó³rzêdnej x i y, na razie niewykorzystywane
-	private BufferedImage SobelXFiltration(Kernel SobelX, BufferedImage src)
+	/*private BufferedImage SobelXFiltration(Kernel SobelX, BufferedImage src)
 	{
 		BufferedImage Result;
 		ConvolveOp op1 = new ConvolveOp(SobelX);
@@ -295,7 +295,7 @@ public class ImageProcessing implements BufferedImageOp
 		ConvolveOp op1 = new ConvolveOp(SobelY);
 		Result = op1.filter(src, null);
 		return Result;
-	}
+	}*/
 	
 	//do przekszta³cenia obrazu na skalê szaroœci
 	private BufferedImage grayscaling(BufferedImage src)
@@ -600,7 +600,7 @@ public class ImageProcessing implements BufferedImageOp
 	}
 	
 	
-	private void trackWeakOnes(int x, int y, BufferedImage src)
+	/*private void trackWeakOnes(int x, int y, BufferedImage src)
 	{
 		for (int i = x-1; i <= x+1; i++)
 		{
@@ -613,14 +613,14 @@ public class ImageProcessing implements BufferedImageOp
 	            }
 			}
 		}          
-	 }
+	 }*/
 	 
-	 private boolean isWeak(int x, int y, BufferedImage src) 
+	/* private boolean isWeak(int x, int y, BufferedImage src) 
 	 {
 	      return (src.getRaster().getPixel(x, y, tmpPixel)[0] > 0 && src.getRaster().getPixel(x, y, tmpPixel)[0] < 255);
-     }
+     }*/
 	 
-	 private void HysteresisAndRemoving(BufferedImage src)
+	 /*private void HysteresisAndRemoving(BufferedImage src)
 	 {
 		 int[] tmp = {0};
 	     for (int x = 1; x < src.getWidth() - 1; x++)
@@ -645,7 +645,7 @@ public class ImageProcessing implements BufferedImageOp
                  }
 	         }
 	     }
-	 }
+	 }*/
 	 
 }
 
